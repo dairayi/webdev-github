@@ -1,0 +1,25 @@
+
+
+nav{
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav:hover{
+    color: red;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 70px;
+    padding-bottom: 25px;
+    padding-bottom: 25px;
+}

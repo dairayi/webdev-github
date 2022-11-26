@@ -1,0 +1,6 @@
+you only really need to look at home.pages.js and navbar.js
+
+to show images in react you have to do this
+Just go to the extension url: https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb
+
+Add the extension, enable it, and point it to the folder that contains the local file that you're having trouble with, and it should work correctly.

@@ -13,7 +13,7 @@ function Drivers() {
 
     useEffect(() => {
         setListItems([]);
-        fetch(`http://localhost:3001/driver?driverRef=${searchString}`)
+        fetch(`http://localhost:3001/driver?surname=${searchString}`)
             .then(
                 res => res.json()
             ).then((result) => {
@@ -40,9 +40,10 @@ function Drivers() {
 
     return (
         <div>
-        <SearchDriver
-            setSearchString={searchString}
-        />
+            <div className="SearchUser">
+                <input placeholder="Search Driver" onChange={e => setSearchString(e.target.value)}/>
+                {/* <input placeholder="Search User"/>  */}
+            </div>
         <DriverList
             listDrivers={listItems}
         />

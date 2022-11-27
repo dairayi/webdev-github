@@ -13,7 +13,7 @@ function Constructor() {
 
     useEffect(() => {
         setListItems([]);
-        fetch(`http://localhost:3001/constructor?constructorRef=${searchString}`)
+        fetch(`http://localhost:3001/constructor?name=${searchString}`)
             .then(
                 res => res.json()
             ).then((result) => {
@@ -40,9 +40,11 @@ function Constructor() {
 
     return (
         <div>
-            <SearchConstructor
-                setSearchString={searchString}
-            />
+            <div className="SearchConstructor">
+                <input placeholder="Search Constructor" onChange={e => setSearchString(e.target.value)}/>
+                {/* <input placeholder="Search User"/>  */}
+            </div>
+
             <ConstructorList
                 listConstructor={listItems}
             />

@@ -13,7 +13,7 @@ function Circuits() {
 
     useEffect(() => {
         setListItems([]);
-        fetch(`http://localhost:3001/circuit?circuitRef=${searchString}`)
+        fetch(`http://localhost:3001/circuit?name=${searchString}`)
             .then(
                 res => res.json()
             ).then((result) => {
@@ -40,9 +40,10 @@ function Circuits() {
 
     return (
         <div>
-        <SearchCircuit
-            setSearchString={searchString}
-        />
+            <div className="SearchCircuit">
+                <input placeholder="Search Circuit" onChange={e => setSearchString(e.target.value)}/>
+                {/* <input placeholder="Search User"/>  */}
+            </div>
         <CircuitList
             listCircuits={listItems}
         />

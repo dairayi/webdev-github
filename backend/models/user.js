@@ -9,7 +9,7 @@ let Schema = mongoose.Schema;
 // });
 let userSchema = new Schema({
     username: String,
-    password: String
+    password: String,
     favdriver: String,
     favconstructor: String,
     favcircuit: String
